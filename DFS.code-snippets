@@ -1,0 +1,28 @@
+{
+	"DFS": {
+  "prefix": "dfs",
+  "body": [
+    "const ll N=2*1e5; // number of vertices",
+    "vector<ll> adj[N] ; // graph represented as an adjacency list",
+    "",
+    "vector<bool> visited(N+1,0);",
+    "",
+    "void dfs(ll v) {",
+    "    //Take action on vertex after entering the vertex",
+    "",
+    "    visited[v] = true;",
+    "    for (auto u : adj[v]) {",
+    "       //take action on child before entering the child",
+    "",
+    "        if (!visited[u])",
+    "            dfs(u);",
+    "       //take action  on child after exiting the child",
+    "",
+    "    }",
+    "   // take action on vertex before exiting the vertex",
+    "",
+    "}"
+  ],
+  "description": "DFS"
+}
+}

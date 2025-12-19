@@ -1,0 +1,27 @@
+{
+	"BFS": {
+  "prefix": "bfs",
+  "body": [
+    "  vector<ll>adj(n);",
+    "    queue<ll>Q;",
+    "    vector<bool>visit(n+1,0);",
+    "    Q.push(1);",
+    "    visit[1]=1;",
+    "",
+    "    while(!Q.empty()){",
+    "        ll cur=Q.front();",
+    "        Q.pop();",
+    "",
+    "",
+    "        for(auto v : adj[cur]){",
+    "            if(visit[v]==0){",
+    "                Q.push(v);",
+    "                visit[v]=1;",
+    "            }",
+    "        }",
+    "    }",
+    ""
+  ],
+  "description": "BFS"
+}
+}
