@@ -1,0 +1,32 @@
+{
+	"seive": {
+  "prefix": "seive",
+  "body": [
+    "ll const val=sqrtl(1e15);",
+    "",
+    "vector<bool> primes(val+1,true);",
+    "//vector<ll>spf(1e7+1,0);",
+    "vector<ll>pr;",
+    "void seive() {",
+    "    primes[0]=primes[1]=false;",
+    "    for(ll i=2; i*i<=(val+1); i++) {",
+    "        if(primes[i]) {",
+    "           //spf[i]=i          ",
+    "            for(ll j=i*i; j<=(val+1); j+=i) {",
+    "                primes[j]=false;",
+    "                //spf[j]=min(spf[j],(ll)i);  ",
+    "                ",
+    "            }",
+    "        }",
+    "",
+    "    }",
+    "    for(ll i=1; i<=(val+1); i++) {",
+    "        if(primes[i]) {",
+    "            pr.pb(i);",
+    "        }",
+    "    }",
+    "}"
+  ],
+  "description": "seive"
+}
+}
